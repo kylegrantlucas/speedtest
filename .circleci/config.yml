@@ -22,10 +22,10 @@ jobs:
       - run:
           name: Run tests
           command: |
-            #./cc-test-reporter before-build        
+            ./cc-test-reporter before-build        
             trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
             go test -coverprofile=c.out -v ./... | tee ${TEST_RESULTS}/go-test.out
-            #./cc-test-reporter after-build
+            ./cc-test-reporter after-build
 
       - store_artifacts:
           path: /tmp/test-results
