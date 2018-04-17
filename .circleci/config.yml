@@ -6,7 +6,7 @@ jobs:
 
     environment:
       TEST_RESULTS: /tmp/test-results
-      #CC_TEST_REPORTER_ID: 47a764c2b7b6cd9b3b79be8bdcf3dd01c44a9e56393366788422108c4ea6a2b1
+      CC_TEST_REPORTER_ID: 83b6b0309d332682c6bbefffc2017794e8a65135de35fc944d4520390e5abba3
 
     working_directory: /go/src/github.com/kylegrantlucas/speedtest
     steps:
