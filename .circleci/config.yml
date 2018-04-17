@@ -1,0 +1,35 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:latest
+
+    environment:
+      TEST_RESULTS: /tmp/test-results
+      #CC_TEST_REPORTER_ID: 47a764c2b7b6cd9b3b79be8bdcf3dd01c44a9e56393366788422108c4ea6a2b1
+
+    working_directory: /go/src/github.com/kylegrantlucas/speedtest
+    steps:
+      - checkout
+      - run: mkdir -p $TEST_RESULTS
+      - run: go get github.com/jstemmer/go-junit-report
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+
+      - run:
+          name: Run tests
+          command: |
+            #./cc-test-reporter before-build        
+            trap "go-junit-report <${TEST_RESULTS}/go-test.out > ${TEST_RESULTS}/go-test-report.xml" EXIT
+            go test -coverprofile=c.out -v ./... | tee ${TEST_RESULTS}/go-test.out
+            #./cc-test-reporter after-build
+
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: raw-test-output
+
+      - store_test_results:
+          path: /tmp/test-results
