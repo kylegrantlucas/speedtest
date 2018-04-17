@@ -45,3 +45,9 @@ func main() {
 Major thanks to @zpeters for the excellent [github.com/zpeters/speedtest](https://github.com/zpeters/speedtest) package, which server as a major starting off point for this repo.
 
 ## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/kylegrantlucas/alexa_hue. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The package is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
