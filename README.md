@@ -18,7 +18,8 @@ func main() {
 	if err != nil {
 		fmt.Printf("error getting creating client: %v", err)
 	}
-
+	
+	// Pass an empty string to select the fastest server
 	server, err := client.GetServer("")
 	if err != nil {
 		fmt.Printf("error getting server: %v", err)
