@@ -4,6 +4,20 @@
 A golang package for running speedtests against speedtest.net.
 
 ## Usage
+```
+package main
+
+import (
+  "fmt"
+  "github.com/kylegrantlucas/speedtest"
+  "github.com/kylegrantlucas/speedtest/http"
+)
+
+func main() {
+
+}
+```
 ## Tests
+`go test ./...`
 ## Thanks
 ## Contributing
