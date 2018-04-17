@@ -41,4 +41,7 @@ func main() {
 ## Tests
 `go test ./...`
 ## Thanks
+
+Major thanks to @zpeters for the excellent [github.com/zpeters/speedtest](https://github.com/zpeters/speedtest) package, which server as a major starting off point for this repo.
+
 ## Contributing
