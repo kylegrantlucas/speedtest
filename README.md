@@ -47,7 +47,7 @@ Major thanks to @zpeters for the excellent [github.com/zpeters/speedtest](https:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kylegrantlucas/alexa_hue. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kylegrantlucas/speedtest. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
