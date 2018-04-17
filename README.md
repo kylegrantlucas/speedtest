@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-  speedtestConfig := &sthttp.SpeedtestConfig{
+  config := &sthttp.SpeedtestConfig{
 			ConfigURL:       "http://c.speedtest.net/speedtest-config.php?x=" + uniuri.New(),
 			ServersURL:      "http://c.speedtest.net/speedtest-servers-static.php?x=" + uniuri.New(),
 			AlgoType:        "max",
@@ -24,8 +24,8 @@ func main() {
 			UserAgent:       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.21 Safari/537.36",
 	}
 
-  speedtestClient, err := speedtest.NewClient(
-			speedtestConfig,
+  client, err := speedtest.NewClient(
+			config,
 			[]int{350, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000},
 			[]int{int(0.25 * 1024 * 1024), int(0.5 * 1024 * 1024), int(1.0 * 1024 * 1024), int(1.5 * 1024 * 1024), int(2.0 * 1024 * 1024)},
 			30*time.Second,
