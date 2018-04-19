@@ -16,7 +16,7 @@ import (
 func main() {
 	client, err := speedtest.NewDefaultClient()
 	if err != nil {
-		fmt.Printf("error getting creating client: %v", err)
+		fmt.Printf("error creating client: %v", err)
 	}
 	
 	// Pass an empty string to select the fastest server
